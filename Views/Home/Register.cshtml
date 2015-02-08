@@ -1,0 +1,146 @@
+﻿@model Online_Car_Shopping.Models.Model1
+
+@{
+    ViewBag.Title = "Register";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Auto-Swift Website Template | Contact :: w3layouts</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Julius+Sans+One' rel='stylesheet' type='text/css'>
+    <link href="~/Content/style.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+    <!--start header-->
+    <div class="h_bg">
+        <div class="wrap">
+            <div class="wrapper">
+                <div class="header">
+                    @*<@*div class="logo">
+                            <h1>Online Shopping</h1>
+                        </div>*@*
+                    <div class="logo">
+                        <a href="Index.html"><img src="/images/logo.png"> </a>
+                    </div>
+                    <div class="cssmenu">
+                        <ul>
+                            <li><a href="/Home/Index"><span>Home</span></a></li>
+                            <li><a href="/About/About"><span>About</span></a></li>
+
+                            <li class="active"><a href="/Register/Register"><span>Registeration</span></a></li>
+                            <li class="last"><a href="/Contact/Contact"><span>Contact</span></a></li>
+                        </ul>
+                        <div class="clear"></div>
+
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="h_bg">
+        <div class="content_bg">
+            <div class="wrap">
+                <div class="wrapper">
+                    <div class="main">
+                        <div class="section group">
+                            <div class="contact-form">
+                                
+                                <h2 class="style">Sign Up!</h2>
+                                @*<form method="post" action="">
+                                        <div>
+                                            <span><label>Name</label></span>
+                                            <span><input name="userName" type="text"></span>
+                                        </div>
+                                        <div>
+                                            <span><label>E-mail</label></span>
+                                            <span><input name="userEmail" type="text"></span>
+                                        </div>
+                                        <div>
+                                            <span><label>Password</label></span>
+                                            <span><input name="userPassword" type="text"></span>
+                                        </div>
+                                        <div>
+                                            <span><label>Shipping Address</label></span>
+                                            <span><input name="address" type="text"></span>
+                                        </div>
+                                        <div>
+                                            <span><a href="/Register/Register"><input type="submit" value="Submit"></a></span>
+                                        </div>
+                                    </form>*@
+                                @using (Html.BeginForm("Register","Register","post"))
+                                {
+                                    @Html.AntiForgeryToken()
+                                    @Html.ValidationSummary()
+
+                                    <fieldset>
+                                        @*<legend>Registration Form</legend>*@
+                                        <ol>
+                                            <li><div><span><label>
+                                                @Html.LabelFor(m=>m.Uname)</label></span>
+                                                @Html.TextBoxFor(m => m.Uname)</div>
+                                            </li>
+                                            <li><div><span><label>
+                                                @Html.LabelFor(m => m.Email)</label></span>
+                                                @Html.TextBoxFor(m=>m.Email)
+                                                @*@Html.ValidationMessageFor(m=>m.Email)*@</div>
+                                            </li>
+                                            <li><div><span><label>
+                                                @Html.LabelFor(m => m.Password)</label></span>
+                                                @Html.TextBoxFor(m => m.Password)</div>
+                                            </li>
+                                            <li><div><span><label>
+                                                @Html.LabelFor(m => m.ShippingAddress)</label></span>
+                                                @Html.TextBoxFor(m => m.ShippingAddress)</div>
+                                            </li>
+                                            <li>
+                                                <div><span>
+                                                    <label>
+                                                        <input type="file" name="Name" />
+                                                   </label> </span>
+                                                </div>
+                                            </li>
+                                        </ol>
+                                        @*<form action="/home/Save" method="post" enctype="multipart/form-data">
+                                            <div><label><span>Upload Image</span></label> <input type="file" name="Name" /></div>
+                                        </form>*@
+                                        <input type="submit" value="Register" />
+                                    </fieldset>
+                                }
+                                @section Scripts {
+                                    @Scripts.Render("~/bundles/jqueryval")
+                                }
+
+                                
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @*<div class="footer_bg">
+        <div class="wrap">
+            <div class="wrapper">
+                <div class="footer">
+                    <div class="copy">
+                        <p class="w3-link">© All Rights Reserved | Design by ; <a href="mailto:mcsf13m024@pucit.edu.pk"> MCSF13M024</a></p>
+                    </div>
+                    <div class="f_nav">
+                        <ul>
+                            <li><a href="/Register/Register">Registeration</a></li>
+                            <li><a href="https://www.facebook.com/Punjab.University.College.of.IT">Facebook</a></li>
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>*@
+</body>
+</html>
+

@@ -1,0 +1,202 @@
+﻿@*@model Online_Car_Shopping.Models.LoginModel*@
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Car Shopping | Home</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Julius+Sans+One' rel='stylesheet' type='text/css'>
+    <link href="~/Content/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!--slider-->
+    <link href="~/Content/camera.css" rel="stylesheet" type="text/css" media="all" />
+    <script type='text/javascript' src='~/Scripts/jquery.min.js'></script>
+    <script type='text/javascript' src='~/Scripts/jquery.mobile.customized.min.js'></script>
+    <script type='text/javascript' src='~/Scripts/jquery.easing.1.3.js'></script>
+    <script type='text/javascript' src='~/Scripts/camera.min.js'></script>
+
+    <script>
+        jQuery(function () {
+
+            jQuery('#camera_wrap_1').camera({
+                thumbnails: true
+            });
+
+            jQuery('#camera_wrap_2').camera({
+                height: '400px',
+                loader: 'bar',
+                pagination: false,
+                thumbnails: true
+            });
+        });
+    </script>
+</head>
+<body>
+    <!--start header-->
+    <div class="h_bg">
+        <div class="wrap">
+            <div class="wrapper">
+                <div class="header">
+                        <div class="logo">
+                            <a href="Index.html"><img src="/images/logo.png"> </a>
+                         </div>
+                        <div class="cssmenu">
+                            <ul>
+                                <li class="active"><a href="/Home/Index"><span>Home</span></a></li>
+                                <li><a href="/About/About"><span>About</span></a></li>
+                                <li><a href="/Register/Register"><span>Registeration</span></a></li>
+                                <li class="last"><a href="/Contact/Contact"><span>Contact</span></a></li>
+                            </ul>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+            </div>
+        </div>
+    </div>
+   
+    <!-- start content -->
+    <div class="content_bg">
+        <div class="wrap">
+            <div class="wrapper">
+                <div class="main">
+                    <!-- start content_left -->
+                    <div class="content_left">
+                        <div class="search">
+                            <h4>search</h4>
+                            <form>
+                                <input type="text" value="" placeholder="Enter Your search...">
+                                <input type="submit" value="">
+                            </form>
+                        </div>
+                        <div class="text1-nav">
+                            <h2>Main Menu</h2>
+                            <ul>
+                                <li><a href="/Honda/Honda">HONDA</a></li>
+                                <li><a href="/Mercidies/mercidies">MERCIDIES</a></li>
+                                <li><a href="/Suzuki/Suzuki">SUZUKI</a></li>
+                                <li><a href="/Ford/Ford">Ford</a></li>
+                                <li><a href="/Farari/Farari">FARARI</a></li>
+                                <li><a href="/Core/Core">COURE</a></li>
+                            </ul>
+                        </div>
+                        <div class="search1">
+                            <h2>login form!</h2>
+                            <form action="/Home/UserLogin" method="get">
+
+                                <label>Email Id:</label>
+                                <input type="email" name="Name" />
+                                <label>Password:</label>
+                                <input type="password" name="pwd" />
+                                <input type="submit" value="Submit" name="submit" class="submit" />
+                                <label>If you don't have an account??<a href="/Home/Register">Register</a></label>
+                            </form>
+                           
+                        </div>
+                    </div>
+                    <!-- start content_right -->
+                    <div class="content_right">
+                        <div class="gallery">
+                            <h2>Latest Gallary</h2>
+                            <section>
+                                <ul class="lb-album">
+                                    <li>
+                                        <a href="#image-1">
+                                            <img src="~/images/gallery1.jpg" alt="">
+                                            <span> </span>
+                                        </a>
+                                        <div class="lb-overlay" id="image-1">
+                                            <img src="~/images/gallery1.jpg" alt="">
+                                            <a href="#page" class="lb-close"> </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="#image-2">
+                                            <img src="~/images/gallery2.jpg" alt="">
+                                            <span> </span>
+                                        </a>
+                                        <div class="lb-overlay" id="image-2">
+                                            <img src="~/images/gallery2.jpg" alt="">
+                                            <a href="#page" class="lb-close"> </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="#image-3">
+                                            <img src="~/images/gallery3.jpg" alt="">
+                                            <span> </span>
+                                        </a>
+                                        <div class="lb-overlay" id="image-3">
+                                            <img src="~/images/gallery3.jpg" alt="image03">
+                                            <a href="#page" class="lb-close"> </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="#image-4">
+                                            <img src="~/images/gallery4.jpg" alt="">
+                                            <span> </span>
+                                        </a>
+                                        <div class="lb-overlay" id="image-4">
+                                            <img src="~/images/gallery4.jpg" alt="image04">
+                                            <a href="#page" class="lb-close"> </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="clear"></div>
+
+                            </section>
+                        </div>
+                        <div class="image group">
+                            <div class="grids_of_2">
+                                <div class="grid images_3_of_1">
+                                    <img src="~/images/FIT.jpg">
+                                </div>
+                                <div class="grid span_2_of_3">
+                                    <h3>Honda FIT 2015</h3>
+                                    <p class="para">Dimensional changes are purposely modest. Overall length has been clipped 1.6 inches versus the previous generation, width is up by only 0.3 inch, and height remains unchanged at 60 inches. To stretch legroom, the wheelbase is now 99.6 inches, 1.2 inches longer than the second-generation Fit. Those alterations to the envelope yield a five-percent gain in passenger volume and a 4.8-inch increase in rear legroom.One feature that hasn’t changed is what Honda calls its Magic Seat </p>
+                                   <!-- <div class="button"><span><a href="details.html">Read More</a></span></div> -->
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="grids_of_2 top">
+                                <div class="grid images_3_of_1">
+                                    <img src="~/images/F12.jpg">
+                                </div>
+                                <div class="grid span_2_of_3">
+                                    <h3>F12berlinetta 2013</h3>
+                                    <p class="para">it's quicker than an Enzo (!) around Fiorano, Ferrari's test track. This ultimate 730-bhp V-12 Ferrari with a rear-mounted 7-speed dual-clutch gearbox is Ferrari's fastest, most powerful road car ever, with a claimed 0–62 mph time of 3.1 seconds and a top speed of over 210 mph.</p>
+                                  <!--  <div class="button"><span><a href="details.html">Read More</a></span></div> -->
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @*<div class="footer_bg">
+        <div class="wrap">
+            <div class="wrapper">
+                <div class="footer">
+                    <div class="copy">
+                        <p class="w3-link">© All Rights Reserved | Design by ; <a href="mailto:mcsf13m024@pucit.edu.pk"> MCSF13M024</a></p>
+                    </div>
+                    <div class="f_nav">
+                        <ul>
+                            <li><a href="/Register/Register">Registration</a></li>
+                            <li><a href="https://www.facebook.com/Punjab.University.College.of.IT">Facebook</a></li>
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>*@
+</body>
+</html>
